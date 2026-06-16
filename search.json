@@ -32,7 +32,7 @@
     "href": "ki_26.html#für-uns-wichtiger",
     "title": "KI 26",
     "section": "Für uns wichtiger …",
-    "text": "Für uns wichtiger …\nWie lernt eine KI?\nKI-Systeme lernen durch:\n\ngroße Datenmengen\nviele Beispiele\nRückmeldungen über richtige und falsche Ergebnisse\n\n\nSagt nicht darüber aus wie gelernt wird!"
+    "text": "Für uns wichtiger …\nWie lernt eine KI?\nKI-Systeme lernen durch:\n\ngroße Datenmengen\nviele Beispiele\nRückmeldungen über richtige und falsche Ergebnisse\n\n\nSagt nichts darüber aus wie gelernt wird!"
   },
   {
     "objectID": "ki_26.html#du-als-ki",
@@ -68,6 +68,146 @@
     "title": "KI 26",
     "section": "Am Runden-Ende",
     "text": "Am Runden-Ende\n\nGewinner notieren\nHat der Computer verloren, so wird der letzte Zug auf der Zugkarte gestrichen (Farbe vorsichtig entwerten) und darf\nnicht mehr verwendet werden."
+  },
+  {
+    "objectID": "ki_26.html#welches-fortbewegungsmittel",
+    "href": "ki_26.html#welches-fortbewegungsmittel",
+    "title": "KI 26",
+    "section": "Welches Fortbewegungsmittel?",
+    "text": "Welches Fortbewegungsmittel?"
+  },
+  {
+    "objectID": "ki_26.html#woher-kommen-die-trainingsdaten",
+    "href": "ki_26.html#woher-kommen-die-trainingsdaten",
+    "title": "KI 26",
+    "section": "Woher kommen die Trainingsdaten?",
+    "text": "Woher kommen die Trainingsdaten?\n\nUmfragen in Firmen\nUmfragen in Sportgeschäften\nAuswerten von Fitness-Trackern (legal?)\n…\n\n\nTrainingsdaten und Datenschutz kollidieren oft!"
+  },
+  {
+    "objectID": "ki_26.html#problem-baumerstellung",
+    "href": "ki_26.html#problem-baumerstellung",
+    "title": "KI 26",
+    "section": "Problem Baumerstellung",
+    "text": "Problem Baumerstellung\nEs gibt nicht nur eine einzige Methode!\n\nmanche sind leichter verständlich\nmanche rechnen sich leichter per Hand\nmanche existieren bereits vorgefertigt\n…"
+  },
+  {
+    "objectID": "ki_26.html#generelle-frage",
+    "href": "ki_26.html#generelle-frage",
+    "title": "KI 26",
+    "section": "Generelle Frage",
+    "text": "Generelle Frage\n… wollen wir Bäume? … wollen wir KI?"
+  },
+  {
+    "objectID": "ki_26.html#szenario-orchideen",
+    "href": "ki_26.html#szenario-orchideen",
+    "title": "KI 26",
+    "section": "Szenario Orchideen",
+    "text": "Szenario Orchideen\nKlassiker aus dem Bereich Maschinelles Lernen.\n\n\n\n\n\n\n\n\n\n\n\nSepal Length\nSepal Width\nPetal Length\nPetal Width\nSpecies\n\n\n\n\n5.1\n3.5\n1.4\n0.2\nIris-setosa\n\n\n4.9\n3.0\n1.4\n0.2\nIris-setosa\n\n\n4.7\n3.2\n1.3\n0.2\nIris-setosa\n\n\n6.8\n3.2\n5.9\n2.3\nIris-virginica\n\n\n6.7\n3.3\n5.7\n2.5\nIris-virginica\n\n\n6.7\n3.0\n5.2\n2.3\nIris-virginica\n\n\n6.3\n2.3\n4.4\n1.3\nIris-versicolor\n\n\n5.6\n3.0\n4.1\n1.3\nIris-versicolor\n\n\n5.5\n2.5\n4.0\n1.3\nIris-versicolor\n\n\n\n\n\nSepal = Kelchblatt, Petal = Blütenblatt"
+  },
+  {
+    "objectID": "ki_26.html#szenario-abitur",
+    "href": "ki_26.html#szenario-abitur",
+    "title": "KI 26",
+    "section": "Szenario Abitur",
+    "text": "Szenario Abitur\n\nDie Schule sammelt über Jahre Daten aller Schüler in allen Fächern\n\nKI wertet sie aus und erstellt einen Entscheidungsbaum\nDie aktuellen Daten eines Schülers werden in den Baum gefüttert\nAm Ende stehen die (wahrscheinlichen) Abiturnoten\nViel Arbeit gespart - beiden Seiten!"
+  },
+  {
+    "objectID": "ki_26.html#details---vereinfacht",
+    "href": "ki_26.html#details---vereinfacht",
+    "title": "KI 26",
+    "section": "Details - vereinfacht",
+    "text": "Details - vereinfacht\n\n\n\n\nSuS\nFach\nFehlzeit &gt; 10 %\nÜbungen &gt; 50 %\nBestanden\n\n\n\n\n1\nMathe\nJa\nJa\nNein\n\n\n2\nEthik\nJa\nJa\nJa\n\n\n3\nIT\nNein\nNein\nJa\n\n\n4\nMathe\nNein\nNein\nNein\n\n\n5\nMathe\nNein\nJa\nJa\n\n\n6\nIT\nJa\nNein\nNein\n\n\n7\nEthik\nNein\nNein\nJa\n\n\n8\nEthik\nNein\nNein\nJa\n\n\n9\nIT\nJa\nJa\nJa"
+  },
+  {
+    "objectID": "ki_26.html#problem-daten",
+    "href": "ki_26.html#problem-daten",
+    "title": "KI 26",
+    "section": "Problem Daten",
+    "text": "Problem Daten\n\nUnabhängig von der Art von KI müssen Trainingsdaten aufbereiten werden.\nGroße KI’s werden mit gigantischen Datenmengen trainiert …\n… hoher Aufbereitungsaufwand."
+  },
+  {
+    "objectID": "ki_26.html#erstellen-eines-baumes",
+    "href": "ki_26.html#erstellen-eines-baumes",
+    "title": "KI 26",
+    "section": "Erstellen eines Baumes",
+    "text": "Erstellen eines Baumes\nARBEITSPHASE"
+  },
+  {
+    "objectID": "ki_26.html#analytisches-vorgehen",
+    "href": "ki_26.html#analytisches-vorgehen",
+    "title": "KI 26",
+    "section": "Analytisches Vorgehen",
+    "text": "Analytisches Vorgehen"
+  },
+  {
+    "objectID": "ki_26.html#problem",
+    "href": "ki_26.html#problem",
+    "title": "KI 26",
+    "section": "Problem",
+    "text": "Problem\nOrdne die Figuren nach rot und grün."
+  },
+  {
+    "objectID": "ki_26.html#wir-wissen-mehr",
+    "href": "ki_26.html#wir-wissen-mehr",
+    "title": "KI 26",
+    "section": "Wir wissen mehr …",
+    "text": "Wir wissen mehr …\n\n10 rot, 10 grün"
+  },
+  {
+    "objectID": "ki_26.html#gesucht-wird-ein-entscheidungsbaum",
+    "href": "ki_26.html#gesucht-wird-ein-entscheidungsbaum",
+    "title": "KI 26",
+    "section": "Gesucht wird ein Entscheidungsbaum",
+    "text": "Gesucht wird ein Entscheidungsbaum\nDer Computer soll über Form und Inhalt die Farbe erkennen."
+  },
+  {
+    "objectID": "ki_26.html#mathematischer-ansatz",
+    "href": "ki_26.html#mathematischer-ansatz",
+    "title": "KI 26",
+    "section": "Mathematischer Ansatz",
+    "text": "Mathematischer Ansatz\nWenn der Computer rät hat er eine Trefferquote von …\n\n\\(50\\%\\)"
+  },
+  {
+    "objectID": "ki_26.html#arbeitsauftrag",
+    "href": "ki_26.html#arbeitsauftrag",
+    "title": "KI 26",
+    "section": "Arbeitsauftrag",
+    "text": "Arbeitsauftrag\nWelche Wahrscheinlichkeiten entstehen bei der gegenteiligen Entscheidung?"
+  },
+  {
+    "objectID": "ki_26.html#erkenntnis",
+    "href": "ki_26.html#erkenntnis",
+    "title": "KI 26",
+    "section": "Erkenntnis",
+    "text": "Erkenntnis\nBei der Wahl „Welche Seite wird grün?“\nwird die Mehrheitsklasse verwendet.\n(rot analog)"
+  },
+  {
+    "objectID": "ki_26.html#warum-mit-der-form-beginnen",
+    "href": "ki_26.html#warum-mit-der-form-beginnen",
+    "title": "KI 26",
+    "section": "Warum mit der Form beginnen?",
+    "text": "Warum mit der Form beginnen?\nExerziere das Beispiel komplett mit der Entscheidung Text durch."
+  },
+  {
+    "objectID": "ki_26.html#mit-muster-als-freiwillige-übung",
+    "href": "ki_26.html#mit-muster-als-freiwillige-übung",
+    "title": "KI 26",
+    "section": "(Mit Muster als freiwillige Übung)",
+    "text": "(Mit Muster als freiwillige Übung)"
+  },
+  {
+    "objectID": "ki_26.html#beschriftung",
+    "href": "ki_26.html#beschriftung",
+    "title": "KI 26",
+    "section": "Beschriftung",
+    "text": "Beschriftung\n\n\n\nDie Wahl wäre links rot, rechts grün.\n\n\n\n\n\\[P(korrekt)=\\frac{13}{20} \\cdot \\frac{10}{13} + \\frac{7}{20} \\cdot \\frac{7}{7} = \\frac{10}{20}+\\frac{7}{20} = \\frac{17}{20} = 0,85\\]\n\n\n\\[P(falsch)=\\frac{13}{20} \\cdot \\frac{3}{13} + \\frac{7}{20} \\cdot \\frac{0}{7} = \\frac{10}{20}+0 = \\frac{3}{20} = 0,15\\]"
+  },
+  {
+    "objectID": "ki_26.html#was-fällt-auf",
+    "href": "ki_26.html#was-fällt-auf",
+    "title": "KI 26",
+    "section": "Was fällt auf?",
+    "text": "Was fällt auf?\nDie Wahrscheinlichkeiten sind beim Aufbau des Baums gar nicht so wichtig!\nZählen reicht!"
   },
   {
     "objectID": "Entscheidungsbaum.html#welches-fortbewegungsmittel",

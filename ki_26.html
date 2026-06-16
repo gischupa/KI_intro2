@@ -197,7 +197,7 @@ für die normalerweise menschliche Intelligenz benötigt wird.</p>
 <li class="fragment"><p>Rückmeldungen über richtige und falsche Ergebnisse</p></li>
 </ul>
 <div class="fragment">
-<p>Sagt nicht darüber aus <strong>wie</strong> gelernt wird!</p>
+<p>Sagt nichts darüber aus <strong>wie</strong> gelernt wird!</p>
 </div>
 </section>
 <section class="slide level2">
@@ -271,8 +271,697 @@ nicht mehr verwendet werden.</li>
 <section id="spielen" class="title-slide slide level1 center">
 <h1>Spielen</h1>
 
+</section>
+
+<section>
+<section id="entscheidungsbäume" class="title-slide slide level1 center">
+<h1>Entscheidungsbäume</h1>
 
 </section>
+<section id="welches-fortbewegungsmittel" class="slide level2">
+<h2>Welches Fortbewegungsmittel?</h2>
+
+<img data-src="bilder/baum_laufen.png" class="r-stretch"></section>
+<section class="slide level2">
+
+<p>Dieser <em>fertige</em> Baum kann verwendete werden …</p>
+<div class="fragment absolute" style="top: 100px; ">
+<p>… das entspricht der <em>Verwendung der KI</em></p>
+</div>
+<div class="fragment absolute" style="top: 250px; ">
+<p>Das <em>Erstellen</em> des Baums …</p>
+</div>
+<div class="fragment absolute" style="top: 350px; ">
+<p>… entspricht dem <em>Training der KI</em></p>
+</div>
+</section>
+<section id="woher-kommen-die-trainingsdaten" class="slide level2">
+<h2>Woher kommen die Trainingsdaten?</h2>
+<ul>
+<li class="fragment">Umfragen in Firmen</li>
+<li class="fragment">Umfragen in Sportgeschäften</li>
+<li class="fragment">Auswerten von Fitness-Trackern (legal?)</li>
+<li class="fragment">…</li>
+</ul>
+<div class="fragment">
+<p>Trainingsdaten und Datenschutz kollidieren oft!</p>
+</div>
+</section>
+<section id="problem-baumerstellung" class="slide level2">
+<h2>Problem Baumerstellung</h2>
+<p>Es gibt nicht nur eine einzige Methode!</p>
+<ul>
+<li class="fragment">manche sind leichter verständlich</li>
+<li class="fragment">manche rechnen sich leichter per Hand</li>
+<li class="fragment">manche existieren bereits vorgefertigt</li>
+<li class="fragment">…</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<p>Im Kern sind viele Abläufe gleich, Unterschiede liegen in den Details.</p>
+</section>
+<section id="generelle-frage" class="slide level2">
+<h2>Generelle Frage</h2>
+<p><strong>… wollen wir Bäume? … wollen wir KI?</strong></p>
+</section>
+<section id="szenario-orchideen" class="slide level2">
+<h2>Szenario Orchideen</h2>
+<p>Klassiker aus dem Bereich <em>Maschinelles Lernen</em>.</p>
+<div class="smaller">
+<table class="caption-top">
+<colgroup>
+<col style="width: 19%">
+<col style="width: 18%">
+<col style="width: 19%">
+<col style="width: 18%">
+<col style="width: 23%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">Sepal Length</th>
+<th style="text-align: right;">Sepal Width</th>
+<th style="text-align: right;">Petal Length</th>
+<th style="text-align: right;">Petal Width</th>
+<th>Species</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">5.1</td>
+<td style="text-align: right;">3.5</td>
+<td style="text-align: right;">1.4</td>
+<td style="text-align: right;">0.2</td>
+<td>Iris-setosa</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">4.9</td>
+<td style="text-align: right;">3.0</td>
+<td style="text-align: right;">1.4</td>
+<td style="text-align: right;">0.2</td>
+<td>Iris-setosa</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">4.7</td>
+<td style="text-align: right;">3.2</td>
+<td style="text-align: right;">1.3</td>
+<td style="text-align: right;">0.2</td>
+<td>Iris-setosa</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">6.8</td>
+<td style="text-align: right;">3.2</td>
+<td style="text-align: right;">5.9</td>
+<td style="text-align: right;">2.3</td>
+<td>Iris-virginica</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">6.7</td>
+<td style="text-align: right;">3.3</td>
+<td style="text-align: right;">5.7</td>
+<td style="text-align: right;">2.5</td>
+<td>Iris-virginica</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">6.7</td>
+<td style="text-align: right;">3.0</td>
+<td style="text-align: right;">5.2</td>
+<td style="text-align: right;">2.3</td>
+<td>Iris-virginica</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">6.3</td>
+<td style="text-align: right;">2.3</td>
+<td style="text-align: right;">4.4</td>
+<td style="text-align: right;">1.3</td>
+<td>Iris-versicolor</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">5.6</td>
+<td style="text-align: right;">3.0</td>
+<td style="text-align: right;">4.1</td>
+<td style="text-align: right;">1.3</td>
+<td>Iris-versicolor</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">5.5</td>
+<td style="text-align: right;">2.5</td>
+<td style="text-align: right;">4.0</td>
+<td style="text-align: right;">1.3</td>
+<td>Iris-versicolor</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="small">
+<p>Sepal = Kelchblatt, Petal = Blütenblatt</p>
+</div>
+</section>
+<section class="slide level2">
+
+<p><strong>Infos zu den Daten</strong></p>
+<ul>
+<li class="fragment">Die Namen der Orchideen-Art nennt man <em>Label</em> der Daten.</li>
+<li class="fragment">Die Daten werden als Baum strukturiert.</li>
+<li class="fragment">Damit können Orchideen klassifiziert werden, die der Benutzer nicht kennt.</li>
+<li class="fragment">Die <em>exakten</em> Werte müssen nicht in den Daten auftreten!</li>
+<li class="fragment">Nach welchen Attributen in welcher Reihenfolge wird der Baum gebaut?</li>
+</ul>
+</section>
+<section class="slide level2">
+
+
+<img data-src="bilder/iris.png" style="width:80.0%" class="r-stretch"></section>
+<section class="slide level2">
+
+
+<img data-src="bilder/iris2.png" style="width:80.0%" class="r-stretch"></section>
+<section id="szenario-abitur" class="slide level2">
+<h2>Szenario Abitur</h2>
+<ul>
+<li class="fragment">Die Schule sammelt über Jahre Daten aller Schüler in allen Fächern<br>
+</li>
+<li class="fragment">KI wertet sie aus und erstellt einen Entscheidungsbaum</li>
+<li class="fragment">Die aktuellen Daten eines Schülers werden in den Baum gefüttert</li>
+<li class="fragment">Am Ende stehen die (wahrscheinlichen) Abiturnoten</li>
+<li class="fragment">Viel Arbeit gespart - beiden Seiten!</li>
+</ul>
+</section>
+<section id="details---vereinfacht" class="slide level2">
+<h2>Details - vereinfacht</h2>
+<div class="smaller">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>SuS</th>
+<th>Fach</th>
+<th>Fehlzeit &gt; 10 %</th>
+<th>Übungen &gt; 50 %</th>
+<th>Bestanden</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Mathe</td>
+<td>Ja</td>
+<td>Ja</td>
+<td>Nein</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Ethik</td>
+<td>Ja</td>
+<td>Ja</td>
+<td>Ja</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>IT</td>
+<td>Nein</td>
+<td>Nein</td>
+<td>Ja</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>Mathe</td>
+<td>Nein</td>
+<td>Nein</td>
+<td>Nein</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>Mathe</td>
+<td>Nein</td>
+<td>Ja</td>
+<td>Ja</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>IT</td>
+<td>Ja</td>
+<td>Nein</td>
+<td>Nein</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>Ethik</td>
+<td>Nein</td>
+<td>Nein</td>
+<td>Ja</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>Ethik</td>
+<td>Nein</td>
+<td>Nein</td>
+<td>Ja</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td>IT</td>
+<td>Ja</td>
+<td>Ja</td>
+<td>Ja</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section class="slide level2">
+
+<p><strong>Verschiedene Ziele:</strong></p>
+<ul>
+<li class="fragment">Orchideen: Klassifizieren (Einordnen)</li>
+<li class="fragment">Abiturnoten: Regression (Wertevorhersage)</li>
+<li class="fragment">Bestanden: Klassifizieren</li>
+<li class="fragment">Wetterbericht:</li>
+<li class="fragment">Hautkrebs-Screening:</li>
+<li class="fragment">Aktien:</li>
+</ul>
+</section>
+<section id="problem-daten" class="slide level2">
+<h2>Problem Daten</h2>
+<ul>
+<li class="fragment">Unabhängig von der Art von KI müssen Trainingsdaten aufbereiten werden.</li>
+<li class="fragment">Große KI’s werden mit gigantischen Datenmengen trainiert …</li>
+<li class="fragment">… hoher Aufbereitungsaufwand.</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<p><strong>Fehlende Werte (Missing Values)</strong></p>
+<ul>
+<li class="fragment">Leere Felder erkennen</li>
+<li class="fragment">Werte entfernen oder ersetzen<br>
+(z. B. durch Mittelwert, Median)</li>
+</ul>
+<div class="fragment">
+<p><strong>Duplikate</strong></p>
+<div class="fragment">
+<p>Doppelte Datensätze identifizieren und entfernen</p>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<p><strong>Ungültige oder fehlerhafte Werte</strong></p>
+<ul>
+<li class="fragment">Tippfehler, falsche Kategorien, unmögliche Werte korrigieren (Alter = −5)</li>
+</ul>
+<div class="fragment">
+<p><strong>Ausreißer (Outliers)</strong></p>
+<div class="fragment">
+<p>Ungewöhnlich hohe oder niedrige Werte erkennen und prüfen</p>
+</div>
+</div>
+<div class="fragment">
+<p><strong>Inkonsistente Formate</strong></p>
+<div class="fragment">
+<p>Einheitliche Schreibweisen herstellen<br>
+„m“, „M“, „male“, … <strong>Eine</strong> Version!</p>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<p><strong>Datentypen korrigieren</strong></p>
+<div class="fragment">
+<p>Zahlen, Datumswerte und Text in die richtigen Formate umwandeln</p>
+</div>
+<div class="fragment">
+<p><strong>Skalierung und Normalisierung</strong></p>
+<div class="fragment">
+<p>Numerische Merkmale auf vergleichbare Wertebereiche bringen</p>
+</div>
+</div>
+<div class="fragment">
+<p><strong>Kategorische Werte bereinigen</strong></p>
+<div class="fragment">
+<p>Kategorien vereinheitlichen und für ML vorbereiten (z. B. Encoding)</p>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<p><strong>Irrelevante Merkmale entfernen</strong></p>
+<div class="fragment">
+<p>Nicht benötigte Spalten oder Informationen löschen</p>
+</div>
+<div class="fragment">
+<p><strong>Konsistenzprüfung</strong></p>
+<ul>
+<li class="fragment">Beziehungen zwischen Attributen überprüfen</li>
+<li class="fragment">Beispiel: Enddatum darf nicht vor dem Startdatum liegen</li>
+</ul>
+</div>
+</section>
+<section id="erstellen-eines-baumes" class="slide level2">
+<h2>Erstellen eines Baumes</h2>
+<p>ARBEITSPHASE</p>
+
+<img data-src="bilder/fischintro.png" class="r-stretch"></section>
+<section id="analytisches-vorgehen" class="slide level2">
+<h2>Analytisches Vorgehen</h2>
+</section>
+<section id="problem" class="slide level2">
+<h2>Problem</h2>
+<p>Ordne die Figuren nach <em>rot</em> und <em>grün</em>.</p>
+
+<img data-src="bilder/geo0_sw_mix.png" style="width:50.0%" class="r-stretch"></section>
+<section id="wir-wissen-mehr" class="slide level2">
+<h2>Wir wissen mehr …</h2>
+
+<img data-src="bilder/geo0.png" class="r-stretch"><p>10 rot, 10 grün</p>
+</section>
+<section id="gesucht-wird-ein-entscheidungsbaum" class="slide level2">
+<h2>Gesucht wird ein Entscheidungsbaum</h2>
+<p>Der Computer soll über Form und Inhalt die Farbe erkennen.</p>
+</section>
+<section class="slide level2">
+
+<p>Welche Eigenschaft als <em>Selector</em>?</p>
+<div>
+<ul>
+<li class="fragment">Form</li>
+<li class="fragment">Striche</li>
+<li class="fragment">Text</li>
+</ul>
+</div>
+</section>
+<section id="mathematischer-ansatz" class="slide level2">
+<h2>Mathematischer Ansatz</h2>
+<p>Wenn der Computer <em>rät</em> hat er eine Trefferquote von …</p>
+<div class="fragment">
+<p><span class="math inline">\(50\%\)</span></p>
+</div>
+</section>
+<section class="slide level2">
+
+<p>Bei Trennung nach Form?</p>
+<p><img data-src="bilder/geo1.png" class="absolute" style="top: 100px; left: 200px; "></p>
+<div class="fragment">
+<p><img data-src="bilder/formsort1a.png" class="absolute" style="top: 400px; left: 70px; "></p>
+<div class="absolute" style="position:absolute; top:150px; left:400px;">
+<p><span class="math inline">\(\frac{8}{20}\)</span></p>
+</div>
+<div class="absolute" style="position:absolute; top:150px; left:670px;">
+<p><span class="math inline">\(\frac{12}{20}\)</span></p>
+</div>
+</div>
+<div class="fragment">
+<div class="absolute" style="position:absolute; top:630px; left:70px;">
+<p>Korrekt: <span class="math inline">\(\frac{3}{8}\)</span></p>
+</div>
+<div class="absolute" style="position:absolute; top:630px; left:300px;">
+<p>Falsch: <span class="math inline">\(\frac{5}{8}\)</span></p>
+</div>
+</div>
+<div class="fragment">
+<div class="absolute" style="position:absolute; top:630px; left:580px;">
+<p>Korrekt: <span class="math inline">\(\frac{5}{12}\)</span></p>
+</div>
+<div class="absolute" style="position:absolute; top:630px; left:820px;">
+<p>Falsch: <span class="math inline">\(\frac{7}{12}\)</span></p>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<p>Korrekt:</p>
+<p><span class="math display">\[P(korrekt)=\frac{8}{20} \cdot \frac{3}{8} + \frac{12}{20} \cdot \frac{5}{12} = \frac{3}{20}+\frac{5}{20} = \frac{8}{20} = 0,4\]</span></p>
+<p><span class="math display">\[P(falsch)=\frac{8}{20} \cdot \frac{5}{8} + \frac{12}{20} \cdot \frac{7}{12} = \frac{5}{20}+\frac{7}{20} = \frac{12}{20} = 0,6\]</span></p>
+<p>Mit 60% Wahrscheinlichkeit liegt die KI falsch!</p>
+</section>
+<section id="arbeitsauftrag" class="slide level2">
+<h2>Arbeitsauftrag</h2>
+<p>Welche Wahrscheinlichkeiten entstehen bei der gegenteiligen Entscheidung?</p>
+</section>
+<section class="slide level2">
+
+</section>
+<section class="slide level2">
+
+<p>Bei Trennung nach Form?</p>
+<p><img data-src="bilder/geo1.png" class="absolute" style="top: 100px; left: 200px; "></p>
+<div class="fragment">
+<p><img data-src="bilder/formsort1.png" class="absolute" style="top: 400px; left: 70px; "></p>
+<div class="absolute" style="position:absolute; top:150px; left:400px;">
+<p><span class="math inline">\(\frac{8}{20}\)</span></p>
+</div>
+<div class="absolute" style="position:absolute; top:150px; left:670px;">
+<p><span class="math inline">\(\frac{12}{20}\)</span></p>
+</div>
+</div>
+<div class="fragment">
+<div class="absolute" style="position:absolute; top:630px; left:70px;">
+<p>Korrekt: <span class="math inline">\(\frac{5}{8}\)</span></p>
+</div>
+<div class="absolute" style="position:absolute; top:630px; left:300px;">
+<p>Falsch: <span class="math inline">\(\frac{3}{8}\)</span></p>
+</div>
+</div>
+<div class="fragment">
+<div class="absolute" style="position:absolute; top:630px; left:580px;">
+<p>Korrekt: <span class="math inline">\(\frac{7}{12}\)</span></p>
+</div>
+<div class="absolute" style="position:absolute; top:630px; left:820px;">
+<p>Falsch: <span class="math inline">\(\frac{5}{12}\)</span></p>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<p>Korrekt:</p>
+<p><span class="math display">\[P(Korrekt) = \frac{8}{20} \cdot \frac{5}{8} + \frac{12}{20} \cdot \frac{7}{12} = \frac{5}{20}+\frac{7}{20} = \frac{12}{20} = 0,6\]</span> <span class="math display">\[P(Falsch) = \frac{8}{20} \cdot \frac{3}{8} + \frac{12}{20} \cdot \frac{5}{12} = \frac{3}{20}+\frac{5}{20} = \frac{8}{20} = 0,4\]</span></p>
+<p>Mit 40% Wahrscheinlichkeit liegt die KI falsch!</p>
+</section>
+<section id="erkenntnis" class="slide level2">
+<h2>Erkenntnis</h2>
+<p>Bei der Wahl „Welche Seite wird grün?“<br>
+wird die <em>Mehrheitsklasse</em> verwendet.</p>
+<p>(rot analog)</p>
+<p><img data-src="bilder/formsort_leer.png" class="absolute" style="top: 400px; left: 70px; "></p>
+</section>
+<section id="warum-mit-der-form-beginnen" class="slide level2">
+<h2>Warum mit der Form beginnen?</h2>
+<p><strong>Exerziere das Beispiel komplett mit der Entscheidung <em>Text</em> durch.</strong></p>
+</section>
+<section id="mit-muster-als-freiwillige-übung" class="slide level2">
+<h2>(Mit <em>Muster</em> als freiwillige Übung)</h2>
+</section>
+<section id="beschriftung" class="slide level2">
+<h2>Beschriftung</h2>
+<p><img data-src="bilder/charsort1.png" class="absolute" style="top: 100px; left: 70px; "></p>
+<div class="fragment">
+<div class="absolute" style="position:absolute; top:400px; left:70px;">
+<p>Die Wahl wäre links rot, rechts grün.</p>
+</div>
+</div>
+<div class="fragment">
+<div class="absolute" style="position:absolute; top:450px; left:70px;">
+<p><span class="math display">\[P(korrekt)=\frac{13}{20} \cdot \frac{10}{13} + \frac{7}{20} \cdot \frac{7}{7} = \frac{10}{20}+\frac{7}{20} = \frac{17}{20} = 0,85\]</span></p>
+</div>
+<div class="absolute" style="position:absolute; top:570px; left:70px;">
+<p><span class="math display">\[P(falsch)=\frac{13}{20} \cdot \frac{3}{13} + \frac{7}{20} \cdot \frac{0}{7} = \frac{10}{20}+0 = \frac{3}{20} = 0,15\]</span></p>
+</div>
+</div>
+</section>
+<section id="was-fällt-auf" class="slide level2">
+<h2>Was fällt auf?</h2>
+<p>Die Wahrscheinlichkeiten sind beim Aufbau des Baums gar nicht so wichtig!</p>
+<p>Zählen reicht!</p>
+</section>
+<section class="slide level2">
+
+</section></section>
+<section>
+<section id="anderes-vorgehen" class="title-slide slide level1 center">
+<h1>Anderes Vorgehen</h1>
+
+</section>
+<section class="slide level2">
+
+<p><strong>Die Daten als Tabelle (nach Form sortiert) = 2 Gruppen</strong></p>
+<div class="smaller absolute" style="left: 10px; ">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Form</th>
+<th>Beschriftung</th>
+<th>Muster</th>
+<th>Farbe</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Dreieck</td>
+<td>Ja</td>
+<td>Nein</td>
+<td>Grün</td>
+</tr>
+<tr class="even">
+<td>Dreieck</td>
+<td>Ja</td>
+<td>Nein</td>
+<td>Grün</td>
+</tr>
+<tr class="odd">
+<td>Dreieck</td>
+<td>Ja</td>
+<td>Nein</td>
+<td>Grün</td>
+</tr>
+<tr class="even">
+<td>Dreieck</td>
+<td>Ja</td>
+<td>Nein</td>
+<td>Grün</td>
+</tr>
+<tr class="odd">
+<td>Dreieck</td>
+<td>Ja</td>
+<td>Nein</td>
+<td>Grün</td>
+</tr>
+<tr class="even">
+<td>Dreieck</td>
+<td>Ja</td>
+<td>Nein</td>
+<td>Grün</td>
+</tr>
+<tr class="odd">
+<td>Dreieck</td>
+<td>Ja</td>
+<td>Ja</td>
+<td>Grün</td>
+</tr>
+<tr class="even">
+<td>Dreieck</td>
+<td>Nein</td>
+<td>Nein</td>
+<td>Rot</td>
+</tr>
+<tr class="odd">
+<td>Dreieck</td>
+<td>Nein</td>
+<td>Nein</td>
+<td>Rot</td>
+</tr>
+<tr class="even">
+<td>Dreieck</td>
+<td>Nein</td>
+<td>Nein</td>
+<td>Rot</td>
+</tr>
+<tr class="odd">
+<td>Dreieck</td>
+<td>Nein</td>
+<td>Nein</td>
+<td>Rot</td>
+</tr>
+<tr class="even">
+<td>Dreieck</td>
+<td>Nein</td>
+<td>Nein</td>
+<td>Rot</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="smaller absolute" style="left: 500px; ">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Form</th>
+<th>Beschriftung</th>
+<th>Muster</th>
+<th>Farbe</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Kreis</td>
+<td>Nein</td>
+<td>Ja</td>
+<td>Grün</td>
+</tr>
+<tr class="even">
+<td>Kreis</td>
+<td>Nein</td>
+<td>Ja</td>
+<td>Grün</td>
+</tr>
+<tr class="odd">
+<td>Kreis</td>
+<td>Nein</td>
+<td>Ja</td>
+<td>Grün</td>
+</tr>
+<tr class="even">
+<td>Kreis</td>
+<td>Nein</td>
+<td>Nein</td>
+<td>Rot</td>
+</tr>
+<tr class="odd">
+<td>Kreis</td>
+<td>Nein</td>
+<td>Nein</td>
+<td>Rot</td>
+</tr>
+<tr class="even">
+<td>Kreis</td>
+<td>Nein</td>
+<td>Nein</td>
+<td>Rot</td>
+</tr>
+<tr class="odd">
+<td>Kreis</td>
+<td>Nein</td>
+<td>Nein</td>
+<td>Rot</td>
+</tr>
+<tr class="even">
+<td>Kreis</td>
+<td>Nein</td>
+<td>Nein</td>
+<td>Rot</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="fragment small absolute" style="top: 600px; left: 500px; ">
+<p>Häufigstes Label jeder Gruppe finden</p>
+</div>
+<div class="fragment small absolute" style="top: 550px; left: 300px; ">
+<p>Grün</p>
+</div>
+<div class="fragment small absolute" style="top: 400px; left: 800px; ">
+<p>Rot</p>
+</div>
+<div class="fragment small absolute" style="top: 200px; left: 400px; ">
+<p>7</p>
+</div>
+<div class="fragment small absolute" style="top: 300px; left: 860px; ">
+<p>5</p>
+</div>
+<div class="fragment small absolute" style="top: 400px; left: 950px; ">
+<p><span class="math inline">\(\displaystyle{\frac{12}{20}}\)</span> Trefferquote</p>
+</div>
+</section>
+<section class="slide level2">
+
+<ul>
+<li class="fragment"><strong>Wiederhole das für jedes Attribut</strong></li>
+<li class="fragment"><strong>Wähle Attribut mit höchster Trefferquote</strong></li>
+</ul>
+</section>
+<section class="slide level2">
+
+
+
+</section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
@@ -575,7 +1264,7 @@ nicht mehr verwendet werden.</li>
       }
         var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
         var mailtoRegex = new RegExp(/^mailto:/);
-          var filterRegex = new RegExp('/' + window.location.host + '/');
+          var filterRegex = new RegExp("https:\/\/gischupa\.github\.io\/KI_intro2\/");
         var isInternal = (href) => {
             return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
         }
